@@ -1,7 +1,8 @@
 from __future__ import unicode_literals
 import spacy
+import prosodic
 
-nlp = spacy.load('en')
+""" nlp = spacy.load('en')
 
 def remove_newlines(file):
   lines = open(file).readlines()
@@ -10,4 +11,15 @@ def remove_newlines(file):
 poem = nlp(' '.join(remove_newlines('the-dry-salvages-excerpt.txt')))
 
 for word in poem:
-  print word.text, word.lemma_
+  print word.text, word.lemma_ """
+
+
+text = prosodic.Text('the-dry-salvages-excerpt.txt')
+
+print 'parse'
+text.parse()
+
+print 'bestParses'
+for p in text.bestParses():
+  print p
+
