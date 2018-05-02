@@ -20,6 +20,11 @@ print 'parse'
 text.parse()
 
 print 'bestParses'
-for p in text.bestParses():
+print(text.meter)
+for p in text.meter:
+  print p
+
+print 'scan'
+for p in text.scan():
   print p
 
